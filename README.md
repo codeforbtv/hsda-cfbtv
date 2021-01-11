@@ -8,6 +8,16 @@ Access to and use of the HSDS is defined via the Human Services Data API - the H
 
 This project aims to implement the HSDA as a method by which the brigade can then enable HSDA client programs - front-ends - to start creating and managing HSDS data for Burlington or all of Vermont.
 
+# Contributing!?
+
+Hop over to the [GitHub project](https://github.com/codeforbtv/hsda-cfbtv/projects/1) and claim a task card by dragging it to the "claimed" column, and assigning it to your GitHub user name.
+
+The task cards with "Good First Issue" are ideal for beginners.
+
+When you are ready, clone the repo using Git on your computer. Then make sure to "checkout" (aka switch-to) the development branch... or create your own branch with your own name.
+
+This API, as was mentioned below, was generated with the intention of being built as a Restify-based API. You will likely find it useful to [reference the documentation for Restify](http://restify.com/) as you work.
+
 ## How the initial commit was reached
 
 We used "swagger-node" to generate an HSDA server skeleton.
