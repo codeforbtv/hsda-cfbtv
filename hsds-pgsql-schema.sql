@@ -1,4 +1,4 @@
-CREATE TABLE sde.accessibility_for_disabilities
+CREATE TABLE hsds.accessibility_for_disabilities
 (
     objectid integer NOT NULL,
     accessibility character varying(255) COLLATE pg_catalog."default",
@@ -13,7 +13,7 @@ WITH (
 TABLESPACE pg_default;
 
 
-CREATE TABLE sde.contact
+CREATE TABLE hsds.contact
 (
     objectid integer NOT NULL,
     name character varying(255) COLLATE pg_catalog."default",
@@ -31,7 +31,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.eligibility
+CREATE TABLE hsds.eligibility
 (
     objectid integer NOT NULL,
     eligibility character varying(255) COLLATE pg_catalog."default",
@@ -45,7 +45,7 @@ WITH (
 TABLESPACE pg_default;
 
 
-CREATE TABLE sde.funding
+CREATE TABLE hsds.funding
 (
     objectid integer NOT NULL,
     source character varying(255) COLLATE pg_catalog."default",
@@ -59,7 +59,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.language
+CREATE TABLE hsds.language
 (
     objectid integer NOT NULL,
     language character varying(255) COLLATE pg_catalog."default",
@@ -73,7 +73,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.location
+CREATE TABLE hsds.location
 (
     objectid integer NOT NULL,
     name character varying(255) COLLATE pg_catalog."default",
@@ -91,7 +91,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.meta_table_descriptions
+CREATE TABLE hsds.meta_table_descriptions
 (
     objectid integer NOT NULL,
     id character varying(255) COLLATE pg_catalog."default",
@@ -104,7 +104,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.metadata
+CREATE TABLE hsds.metadata
 (
     objectid integer NOT NULL,
     id character varying(255) COLLATE pg_catalog."default",
@@ -121,7 +121,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.organization
+CREATE TABLE hsds.organization
 (
     objectid integer NOT NULL,
     name character varying(255) COLLATE pg_catalog."default",
@@ -141,7 +141,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.other_attribute
+CREATE TABLE hsds.other_attribute
 (
     objectid integer NOT NULL,
     id character varying(255) COLLATE pg_catalog."default",
@@ -155,7 +155,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.payment_accepted
+CREATE TABLE hsds.payment_accepted
 (
     objectid integer NOT NULL,
     payment character varying(255) COLLATE pg_catalog."default",
@@ -168,7 +168,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.phone
+CREATE TABLE hsds.phone
 (
     objectid integer NOT NULL,
     "number" character varying(255) COLLATE pg_catalog."default",
@@ -190,7 +190,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.physical_address
+CREATE TABLE hsds.physical_address
 (
     objectid integer NOT NULL,
     attention character varying(255) COLLATE pg_catalog."default",
@@ -212,7 +212,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.postal_address
+CREATE TABLE hsds.postal_address
 (
     objectid integer NOT NULL,
     attention character varying(255) COLLATE pg_catalog."default",
@@ -234,7 +234,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.program
+CREATE TABLE hsds.program
 (
     objectid integer NOT NULL,
     name character varying(255) COLLATE pg_catalog."default",
@@ -248,7 +248,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.required_document
+CREATE TABLE hsds.required_document
 (
     objectid integer NOT NULL,
     document character varying(255) COLLATE pg_catalog."default",
@@ -261,7 +261,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.schedule
+CREATE TABLE hsds.schedule
 (
     objectid integer NOT NULL,
     valid_from timestamp without time zone,
@@ -291,7 +291,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.service
+CREATE TABLE hsds.service
 (
     objectid integer NOT NULL,
     name character varying(255) COLLATE pg_catalog."default",
@@ -317,7 +317,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.service_area
+CREATE TABLE hsds.service_area
 (
     objectid integer NOT NULL,
     service_area character varying(255) COLLATE pg_catalog."default",
@@ -331,7 +331,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.service_at_location
+CREATE TABLE hsds.service_at_location
 (
     objectid integer NOT NULL,
     description character varying(255) COLLATE pg_catalog."default",
@@ -345,7 +345,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-CREATE TABLE sde.service_attribute
+CREATE TABLE hsds.service_attribute
 (
     objectid integer NOT NULL,
     id character varying(255) COLLATE pg_catalog."default",
@@ -359,7 +359,7 @@ WITH (
 TABLESPACE pg_default;
 
 
-CREATE TABLE sde.taxonomy_term
+CREATE TABLE hsds.taxonomy_term
 (
     objectid integer NOT NULL,
     term character varying(255) COLLATE pg_catalog."default",
