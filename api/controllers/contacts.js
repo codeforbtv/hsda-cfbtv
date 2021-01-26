@@ -64,7 +64,7 @@ function listContacts(req, res) {
     sort_by,
     order
   ];
-
+  console.log("listContacts() called");
   // this sends back a JSON response which is a single string
   res.json(outputMessage);
 }
