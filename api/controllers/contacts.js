@@ -80,11 +80,23 @@ function addContact(req, res) {
 
 function listContactsComplete(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('Hello, %s!', name);
-
+  var query = req.swagger.params.query.value || 'no query given';
+  var queries = req.swagger.params.queries.value || 'no queries given';
+  var page = req.swagger.params.page.value || 'no page given';
+  var per_page = req.swagger.params.per_page.value || 'no per_page given';
+  var sort_by = req.swagger.params.sort_by.value || 'no sort_by given';
+  var order = req.swagger.params.order.value || 'no order given';
+  var outputMessage = [
+    query,
+    queries,
+    page,
+    per_page,
+    sort_by,
+    order
+  ];
+  console.log("listContactsComplete() called");
   // this sends back a JSON response which is a single string
-  res.json(hello);
+  res.json(outputMessage);
 }
 
 function addContactsComplete(req, res) {
