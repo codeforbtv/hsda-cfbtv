@@ -8,6 +8,8 @@ Access to and use of the HSDS is defined via the Human Services Data API - the H
 
 This project aims to implement the HSDA as a method by which the brigade can then enable HSDA client programs - front-ends - to start creating and managing HSDS data for Burlington or all of Vermont.
 
+Demo at https://codeforbtv-openreferral.herokuapp.com/
+
 # Contributing!?
 
 Hop over to the [GitHub project](https://github.com/codeforbtv/hsda-cfbtv/projects/1) and claim a task card by dragging it to the "claimed" column, and assigning it to your GitHub user name.
