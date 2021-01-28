@@ -74,14 +74,22 @@ paths:
       summary: Add contact
       description: Creates a new named contact entry for services or organizations
       operationId: addContact
+      consumes:
+        - application/json
       parameters:
         - in: body
-          name: body
+          name: create contact
           schema:
-            $ref: '#/definitions/contact'
-      security:
-        - appid: []
-        - appkey: []
+            type: object
+            properties:
+              firstName:
+                type: string
+              lastName:
+                type: string
+            # $ref: '#/definitions/contact'
+      # security:
+      #   - appid: []
+      #   - appkey: []
       responses:
         '200':
           description: Contact Response
