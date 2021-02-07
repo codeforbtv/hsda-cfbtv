@@ -7,7 +7,12 @@ var app = restify.createServer();
 module.exports = app; // for testing
 
 var config = {
-  appRoot: __dirname // required config
+  appRoot: __dirname, // required config
+  swaggerSecurityHandlers: {
+  	appid: function appidSecurityHandler(req, authOrSecDef, scopesOrApiKey, cb) {
+  		cb();
+  	}
+  }
 };
 
 SwaggerRestify.create(config, function(err, swaggerRestify) {

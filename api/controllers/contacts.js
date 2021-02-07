@@ -95,7 +95,7 @@ function listContactsComplete(req, res) {
     order
   ];
   console.log("listContactsComplete() called");
-  // this sends back a JSON response which is a single string
+
   res.json(outputMessage);
 }
 
