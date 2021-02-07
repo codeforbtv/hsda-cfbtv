@@ -70,12 +70,18 @@ function listContacts(req, res) {
 }
 
 function addContact(req, res) {
-  // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('Hello, %s!', name);
-
-  // this sends back a JSON response which is a single string
-  res.json(hello);
+  // corresponds to the post request
+  console.log('addContact() called');
+  const body = req.body || null;
+  if (!body) {
+    res.json ('missing body');
+  }
+  else {
+    //look for first and last name in the body
+    const firstName = body.firstName || 'no first name given';
+    const lastName = body.lastName || 'no last name given';
+    res.json('Contact first name: ' + firstName + '; Contact last name ' + lastName);
+  }
 }
 
 function listContactsComplete(req, res) {
