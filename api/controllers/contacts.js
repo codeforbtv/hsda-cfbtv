@@ -49,6 +49,7 @@ module.exports = {
   Param 2: a handle to the response object
  */
 function listContacts(req, res) {
+  // console.log(req)
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   var query = req.swagger.params.query.value || 'no query given';
   var queries = req.swagger.params.queries.value || 'no queries given';
@@ -80,9 +81,15 @@ function addContact(req, res) {
 
 function listContactsComplete(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('Hello, %s!', name);
+  let obj = {}
+  let swaggerObject = req.swagger.params;
 
+  // Return an object that has each of the raw values for each query name in key:value pairs
+  for (let [key, value] of Object.entries(swaggerObject)) {
+    obj[key] = value.raw
+  }
+
+  var hello = util.format('Hello, %s!', obj)
   // this sends back a JSON response which is a single string
   res.json(hello);
 }
@@ -98,7 +105,7 @@ function addContactsComplete(req, res) {
 
 function getContactComplete(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
+  var name = req.swagger.params.name.value ? req.swagger.params.name.value : 'stranger';
   var hello = util.format('Hello, %s!', name);
 
   // this sends back a JSON response which is a single string

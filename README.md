@@ -28,6 +28,7 @@ https://github.com/swagger-api/swagger-node
 <ol>
   <li>Created New folder and open terminal/cli in that folder</li>
   <li>Use newest-ish node: <pre>nvm use 14.15.4</pre></li>
+  <!-- I use 14.16, should I use newest (15.12.0)? -->
   <li>Install swagger-node: <pre>npm install -g swagger</pre></li>
   <li>Create project: <mono>swagger project create hsda-cfbtv</mono>
     <ul>
@@ -36,6 +37,7 @@ https://github.com/swagger-api/swagger-node
   </li>
   <li>Use the OpenReferral YAML to overwrite the hello-world skeleton
     <ol>
+    <!-- Having trouble here  -->
     <li>Go get the YAML: https://github.com/openreferral/api-specification/blob/master/_data/api-commons/openapi-hsda.yaml</li>
     <li>Start the project in edit mode: <pre>swagger project edit</pre>
       <ul>
@@ -56,6 +58,7 @@ https://github.com/swagger-api/swagger-node
   <ol>
     <li>There is a problem with swagger-node and modern versions of Node (i.e., => 10 ... which is bizarre!)</li>
     <li>Fix based on this note -> https://github.com/swagger-api/swagger-node/issues/586#issuecomment-560078107</li>
+    <!-- Is this supposed to be package.json? -->
     <li>Edit ‘hsda-cftbv/project.json’ and change:
 <details>
 <summary>that</summary>
