@@ -112,11 +112,13 @@ function addContactsComplete(req, res) {
 
 function getContactComplete(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value ? req.swagger.params.name.value : 'stranger';
-  var hello = util.format('Hello, %s!', name);
+  var contact_id = req.swagger.params.contact_id.value ? req.swagger.params.contact_id.value : 'stranger';
+  var outputMessage = {
+    'contact_id': contact_id,
+  };
 
   // this sends back a JSON response which is a single string
-  res.json(hello);
+  res.json(outputMessage);
 }
 
 function updateContactsComplete(req, res) {
