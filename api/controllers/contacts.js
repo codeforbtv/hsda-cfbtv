@@ -57,16 +57,16 @@ function listContacts(req, res) {
   var per_page = req.swagger.params.per_page.value || 'no per_page given';
   var sort_by = req.swagger.params.sort_by.value || 'no sort_by given';
   var order = req.swagger.params.order.value || 'no order given';
-  var outputMessage = [
-    query,
-    queries,
-    page,
-    per_page,
-    sort_by,
-    order
-  ];
+  var outputMessage = {
+    'query': query,
+    'queries': queries,
+    'page': page,
+    'per_page': per_page,
+    'sort_by': sort_by,
+    'order': order
+  };
 
-  // this sends back a JSON response which is a single string
+  // this sends back a JSON response
   res.json(outputMessage);
 }
 
@@ -88,14 +88,14 @@ function listContactsComplete(req, res) {
   var per_page = req.swagger.params.per_page.value || 'no per_page given';
   var sort_by = req.swagger.params.sort_by.value || 'no sort_by given';
   var order = req.swagger.params.order.value || 'no order given';
-  var outputMessage = [
-    query,
-    queries,
-    page,
-    per_page,
-    sort_by,
-    order
-  ];
+  var outputMessage = {
+    'query': query,
+    'queries': queries,
+    'page': page,
+    'per_page': per_page,
+    'sort_by': sort_by,
+    'order': order
+  };
 
   // this sends back a JSON response which is a single string
   res.json(outputMessage);
