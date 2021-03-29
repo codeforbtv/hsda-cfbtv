@@ -80,18 +80,25 @@ function addContact(req, res) {
 }
 
 function listContactsComplete(req, res) {
+  // This is currently the same as the 'listContacts' method since they appear to have the same definiton in the YAML params
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  let obj = {}
-  let swaggerObject = req.swagger.params;
+  var query = req.swagger.params.query.value || 'no query given';
+  var queries = req.swagger.params.queries.value || 'no queries given';
+  var page = req.swagger.params.page.value || 'no page given';
+  var per_page = req.swagger.params.per_page.value || 'no per_page given';
+  var sort_by = req.swagger.params.sort_by.value || 'no sort_by given';
+  var order = req.swagger.params.order.value || 'no order given';
+  var outputMessage = [
+    query,
+    queries,
+    page,
+    per_page,
+    sort_by,
+    order
+  ];
 
-  // Return an object that has each of the raw values for each query name in key:value pairs
-  for (let [key, value] of Object.entries(swaggerObject)) {
-    obj[key] = value.raw
-  }
-
-  var hello = util.format('Hello, %s!', obj)
   // this sends back a JSON response which is a single string
-  res.json(hello);
+  res.json(outputMessage);
 }
 
 function addContactsComplete(req, res) {
