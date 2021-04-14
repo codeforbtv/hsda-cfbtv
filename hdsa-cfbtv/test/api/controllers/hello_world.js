@@ -8,7 +8,7 @@ describe('controllers', function() {
 
     describe('GET /hello', function() {
 
-      it.only('should return a default string', function(done) {
+      it('should return a default string', function(done) {
 
         request(server)
           .get('/hello')
@@ -17,7 +17,7 @@ describe('controllers', function() {
           .expect(200)
           .end(function(err, res) {
             should.not.exist(err);
-            console.log(res)
+
             res.body.should.eql('Hello, stranger!');
 
             done();
