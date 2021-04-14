@@ -6,9 +6,10 @@
   "keywords": [],
   "author": "",
   "license": "",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "bagpipes": "^0.2.2",
+    "pg": "^8.5.1",
     "restify": "^4.0.2",
     "swagger-restify-mw": "^0.7.0"
   },
@@ -17,7 +18,7 @@
     "supertest": "^1.0.0"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "swagger project test"
   }
 }
