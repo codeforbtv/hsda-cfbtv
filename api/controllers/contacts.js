@@ -49,6 +49,7 @@ module.exports = {
   Param 2: a handle to the response object
  */
 function listContacts(req, res) {
+  // console.log(req)
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   var query = req.swagger.params.query.value || 'no query given';
   var queries = req.swagger.params.queries.value || 'no queries given';
@@ -56,14 +57,14 @@ function listContacts(req, res) {
   var per_page = req.swagger.params.per_page.value || 'no per_page given';
   var sort_by = req.swagger.params.sort_by.value || 'no sort_by given';
   var order = req.swagger.params.order.value || 'no order given';
-  var outputMessage = [
-    query,
-    queries,
-    page,
-    per_page,
-    sort_by,
-    order
-  ];
+  var outputMessage = {
+    'query': query,
+    'queries': queries,
+    'page': page,
+    'per_page': per_page,
+    'sort_by': sort_by,
+    'order': order
+  };
   console.log("listContacts() called");
   // this sends back a JSON response which is a single string
   res.json(outputMessage);
@@ -85,6 +86,7 @@ function addContact(req, res) {
 }
 
 function listContactsComplete(req, res) {
+  // This is currently the same as the 'listContacts' method since they appear to have the same definiton in the YAML params
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   var query = req.swagger.params.query.value || 'no query given';
   var queries = req.swagger.params.queries.value || 'no queries given';
@@ -92,16 +94,15 @@ function listContactsComplete(req, res) {
   var per_page = req.swagger.params.per_page.value || 'no per_page given';
   var sort_by = req.swagger.params.sort_by.value || 'no sort_by given';
   var order = req.swagger.params.order.value || 'no order given';
-  var outputMessage = [
-    query,
-    queries,
-    page,
-    per_page,
-    sort_by,
-    order
-  ];
+  var outputMessage = {
+    'query': query,
+    'queries': queries,
+    'page': page,
+    'per_page': per_page,
+    'sort_by': sort_by,
+    'order': order
+  };
   console.log("listContactsComplete() called");
-
   res.json(outputMessage);
 }
 
@@ -116,11 +117,13 @@ function addContactsComplete(req, res) {
 
 function getContactComplete(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('Hello, %s!', name);
+  var contact_id = req.swagger.params.contact_id.value ? req.swagger.params.contact_id.value : 'stranger';
+  var outputMessage = {
+    'contact_id': contact_id,
+  };
 
   // this sends back a JSON response which is a single string
-  res.json(hello);
+  res.json(outputMessage);
 }
 
 function updateContactsComplete(req, res) {
@@ -143,11 +146,13 @@ function deleteContact(req, res) {
 
 function getContact(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('Hello, %s!', name);
+  var contact_id = req.swagger.params.contact_id.value ? req.swagger.params.contact_id.value : 'stranger';
+  var outputMessage = {
+    'contact_id': contact_id,
+  };
 
   // this sends back a JSON response which is a single string
-  res.json(hello);
+  res.json(outputMessage);
 }
 
 function updateContact(req, res) {
