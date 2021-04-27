@@ -87,9 +87,9 @@ paths:
               lastName:
                 type: string
             # $ref: '#/definitions/contact'
-      # security:
-      #   - appid: []
-      #   - appkey: []
+      security:
+        - appid: []
+        - appkey: []
       responses:
         '200':
           description: Contact Response
