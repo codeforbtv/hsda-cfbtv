@@ -10,7 +10,17 @@
 
   It is a good idea to list the modules that your application depends on in the package.json in the project root
  */
-var util = require('util');
+const util = require('util');
+const { Pool, Client } = require('pg')
+// pools will use environment variables
+// for connection information
+const dbConfig = {
+  ssl: { rejectUnauthorized: false },
+  connectionString: process.env.HSDADBCONNECTIONSTRING
+};
+
+const pool = new Pool(dbConfig);
+
 
 /*
  Once you 'require' a module you can reference the things that it exports.  These are defined in module.exports.
@@ -66,6 +76,9 @@ function listContacts(req, res) {
     'order': order
   };
   console.log("listContacts() called");
+  pool.query('SELECT * FROM hsds.program;', (err, res) => {
+    console.log(res);
+  });
   // this sends back a JSON response which is a single string
   res.json(outputMessage);
 }

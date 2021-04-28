@@ -1,5 +1,5 @@
 'use strict';
-
+require('dotenv').config();
 var SwaggerRestify = require('swagger-restify-mw');
 var restify = require('restify');
 var app = restify.createServer();
