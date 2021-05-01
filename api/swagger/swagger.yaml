@@ -90,6 +90,7 @@ paths:
       security:
         - appid: []
         - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -6186,6 +6187,10 @@ securityDefinitions:
     type: apiKey
     in: header
     name: x-appkey
+  jwt:
+    type: apiKey
+    in: header
+    name: authorization
 definitions:
   accessibility_for_disabilities:
     description: 'Details of the arrangements for access to locations for people who have disabilities'
