@@ -88,8 +88,6 @@ paths:
                 type: string
             # $ref: '#/definitions/contact'
       security:
-        - appid: []
-        - appkey: []
         - jwt: []
       responses:
         '200':
@@ -172,8 +170,7 @@ paths:
           schema:
             $ref: '#/definitions/contact_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Complete Response
@@ -237,8 +234,7 @@ paths:
           schema:
             $ref: '#/definitions/contact_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Complete Response
@@ -273,7 +269,7 @@ paths:
       tags:
       - Contacts
       security:
-      - appid: []
+      - jwt: []
       - appkey: []
       responses:
         '200':
@@ -336,8 +332,7 @@ paths:
           schema:
             $ref: '#/definitions/contact'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -372,7 +367,7 @@ paths:
       tags:
       - Contacts
       security:
-      - appid: []
+      - jwt: []
       - appkey: []
       responses:
         '200':
@@ -435,8 +430,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -510,8 +504,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -549,8 +542,7 @@ paths:
           name: phone_id
           description: 'The unique phone id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -632,8 +624,7 @@ paths:
           schema:
             $ref: '#/definitions/location'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Response
@@ -715,8 +706,7 @@ paths:
           schema:
             $ref: '#/definitions/location_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Complete Response
@@ -780,8 +770,7 @@ paths:
           schema:
             $ref: '#/definitions/location_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Complete Response
@@ -844,8 +833,7 @@ paths:
           schema:
             $ref: '#/definitions/location'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Response
@@ -878,8 +866,7 @@ paths:
           name: location_id
           description: The location id.
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Response
@@ -949,8 +936,7 @@ paths:
           schema:
             $ref: '#/definitions/holiday_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Holiday Schedule Response
@@ -1024,8 +1010,7 @@ paths:
           schema:
             $ref: '#/definitions/holiday_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Holiday Schedule Response
@@ -1063,8 +1048,7 @@ paths:
           name: holiday_schedule_id
           description: 'The unique holiday schdule id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Holiday Schedule Response
@@ -1128,8 +1112,7 @@ paths:
           schema:
             $ref: '#/definitions/language'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Language Response
@@ -1203,8 +1186,7 @@ paths:
           schema:
             $ref: '#/definitions/language'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Language Response
@@ -1242,8 +1224,7 @@ paths:
           name: language_id
           description: 'The unique language id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Language Response
@@ -1307,8 +1288,7 @@ paths:
           schema:
             $ref: '#/definitions/postal_address'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Postal Address Response
@@ -1382,8 +1362,7 @@ paths:
           schema:
             $ref: '#/definitions/postal_address'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Postal Address Response
@@ -1421,8 +1400,7 @@ paths:
           name: postal_address_id
           description: 'The unique postal address id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Postal Address Response
@@ -1486,8 +1464,7 @@ paths:
           schema:
             $ref: '#/definitions/postal_address'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Postal Address Response
@@ -1561,8 +1538,7 @@ paths:
           schema:
             $ref: '#/definitions/postal_address'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Postal Address Response
@@ -1600,8 +1576,7 @@ paths:
           name: postal_address_id
           description: 'The unique postal address id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Postal Address Response
@@ -1665,8 +1640,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -1740,8 +1714,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -1779,8 +1752,7 @@ paths:
           name: phone_id
           description: 'The unique phone id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -1844,8 +1816,7 @@ paths:
           schema:
             $ref: '#/definitions/regular_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Regular Schedule Response
@@ -1919,8 +1890,7 @@ paths:
           schema:
             $ref: '#/definitions/regular_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Regular Schedule Response
@@ -1958,8 +1928,7 @@ paths:
           name: regular_schedule_id
           description: 'The unique regular schedule id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Regular Schedule Response
@@ -2011,8 +1980,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -2086,8 +2054,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -2125,8 +2092,7 @@ paths:
           name: service_id
           description: 'The unique service id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -2190,8 +2156,7 @@ paths:
           schema:
             $ref: '#/definitions/accessibility_for_disabilities'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Accessibility For Disabilities Response
@@ -2265,8 +2230,7 @@ paths:
           schema:
             $ref: '#/definitions/accessibility_for_disabilities'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Accessibility For Disabilities Response
@@ -2304,8 +2268,7 @@ paths:
           name: accessibility_id
           description: 'The unique accessibility for disabilities id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Accessibility For Disabilities Response
@@ -2386,8 +2349,7 @@ paths:
           schema:
             $ref: '#/definitions/organization'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Organization Response
@@ -2468,8 +2430,7 @@ paths:
           schema:
             $ref: '#/definitions/organization_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Organization Complete Response
@@ -2532,8 +2493,7 @@ paths:
           schema:
             $ref: '#/definitions/organization_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Organization Complete Response
@@ -2596,8 +2556,7 @@ paths:
           schema:
             $ref: '#/definitions/organization'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Organization Response
@@ -2632,8 +2591,7 @@ paths:
       tags:
       - Organizations
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Organization Response
@@ -2694,8 +2652,7 @@ paths:
           schema:
             $ref: '#/definitions/contact'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -2768,8 +2725,7 @@ paths:
           schema:
             $ref: '#/definitions/contact'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -2807,8 +2763,7 @@ paths:
           name: contact_id
           description: 'The unique contact id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -2871,8 +2826,7 @@ paths:
           schema:
             $ref: '#/definitions/funding'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Funding Response
@@ -2945,8 +2899,7 @@ paths:
           schema:
             $ref: '#/definitions/funding'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Funding Response
@@ -2984,8 +2937,7 @@ paths:
           name: funding_id
           description: 'The unique funding id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Funding Response
@@ -3048,8 +3000,7 @@ paths:
           schema:
             $ref: '#/definitions/location'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Response
@@ -3122,8 +3073,7 @@ paths:
           schema:
             $ref: '#/definitions/location'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Response
@@ -3161,8 +3111,7 @@ paths:
           name: location_id
           description: 'The unique location id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Location Response
@@ -3225,8 +3174,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -3299,8 +3247,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -3338,8 +3285,7 @@ paths:
           name: phone_id
           description: 'The unique phone id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -3402,8 +3348,7 @@ paths:
           schema:
             $ref: '#/definitions/program'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Program Response
@@ -3476,8 +3421,7 @@ paths:
           schema:
             $ref: '#/definitions/program'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Program Response
@@ -3515,8 +3459,7 @@ paths:
           name: program_id
           description: 'The unique program id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Program Response
@@ -3589,8 +3532,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -3673,8 +3615,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -3717,8 +3658,7 @@ paths:
           name: service_id
           description: 'The unique service id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -3781,8 +3721,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -3855,8 +3794,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -3894,8 +3832,7 @@ paths:
           name: service_id
           description: 'The unique service id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -3976,8 +3913,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -4058,8 +3994,7 @@ paths:
           schema:
             $ref: '#/definitions/service_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Complete Response
@@ -4122,8 +4057,7 @@ paths:
           schema:
             $ref: '#/definitions/service_complete'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Complete Response
@@ -4186,8 +4120,7 @@ paths:
           schema:
             $ref: '#/definitions/service'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -4222,8 +4155,7 @@ paths:
       tags:
       - Services
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Response
@@ -4284,8 +4216,7 @@ paths:
           schema:
             $ref: '#/definitions/contact'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -4358,8 +4289,7 @@ paths:
           schema:
             $ref: '#/definitions/contact'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -4397,8 +4327,7 @@ paths:
           name: contact_id
           description: 'The unique contact id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Contact Response
@@ -4461,8 +4390,7 @@ paths:
           schema:
             $ref: '#/definitions/eligibility'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Eligibility Response
@@ -4535,8 +4463,7 @@ paths:
           schema:
             $ref: '#/definitions/eligibility'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Eligibility Response
@@ -4574,8 +4501,7 @@ paths:
           name: service_id
           description: 'The unique service id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Eligibility Response
@@ -4626,8 +4552,7 @@ paths:
           schema:
             $ref: '#/definitions/fee'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Fees Response
@@ -4700,8 +4625,7 @@ paths:
           schema:
             $ref: '#/definitions/fee'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Fees Response
@@ -4739,8 +4663,7 @@ paths:
           name: feed_id
           description: 'The unique feed id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Fees Response
@@ -4803,8 +4726,7 @@ paths:
           schema:
             $ref: '#/definitions/funding'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Funding Response
@@ -4877,8 +4799,7 @@ paths:
           schema:
             $ref: '#/definitions/funding'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Funding Response
@@ -4916,8 +4837,7 @@ paths:
           name: funding_id
           description: 'The unique funding id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Funding Response
@@ -4980,8 +4900,7 @@ paths:
           schema:
             $ref: '#/definitions/holiday_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Holiday Schedule Response
@@ -5054,8 +4973,7 @@ paths:
           schema:
             $ref: '#/definitions/holiday_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Holiday Schedule Response
@@ -5093,8 +5011,7 @@ paths:
           name: holiday_schedule_id
           description: 'The unique holiday schedule id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Holiday Schedule Response
@@ -5157,8 +5074,7 @@ paths:
           schema:
             $ref: '#/definitions/language'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Language Response
@@ -5231,8 +5147,7 @@ paths:
           schema:
             $ref: '#/definitions/language'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Language Response
@@ -5270,8 +5185,7 @@ paths:
           name: language_id
           description: 'The unique language id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Language Response
@@ -5334,8 +5248,7 @@ paths:
           schema:
             $ref: '#/definitions/payment_accepted'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Payment Accepted Response
@@ -5408,8 +5321,7 @@ paths:
           schema:
             $ref: '#/definitions/payment_accepted'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Payment Accepted Response
@@ -5447,8 +5359,7 @@ paths:
           name: payment_accepted_id
           description: 'The unique payment accepted id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Payment Accepted Response
@@ -5511,8 +5422,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -5585,8 +5495,7 @@ paths:
           schema:
             $ref: '#/definitions/phone'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -5624,8 +5533,7 @@ paths:
           name: phone_id
           description: 'The unique phone id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Phone Response
@@ -5688,8 +5596,7 @@ paths:
           schema:
             $ref: '#/definitions/regular_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Regular Schedule Response
@@ -5762,8 +5669,7 @@ paths:
           schema:
             $ref: '#/definitions/regular_schedule'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Regular Schedule Response
@@ -5801,8 +5707,7 @@ paths:
           name: regular_schedule_id
           description: 'The unique regular schedule id'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Regular Schedule Response
@@ -5865,8 +5770,7 @@ paths:
           schema:
             $ref: '#/definitions/required_document'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Required Document Response
@@ -5939,8 +5843,7 @@ paths:
           schema:
             $ref: '#/definitions/required_document'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Required Document Response
@@ -5978,8 +5881,7 @@ paths:
           name: required_document_id
           description: 'The unique required document id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Required Document Response
@@ -6042,8 +5944,7 @@ paths:
           schema:
             $ref: '#/definitions/service_area'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Area Response
@@ -6116,8 +6017,7 @@ paths:
           schema:
             $ref: '#/definitions/service_area'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Area Response
@@ -6155,8 +6055,7 @@ paths:
           name: service_area_id
           description: 'The unique service area id.'
       security:
-        - appid: []
-        - appkey: []
+        - jwt: []
       responses:
         '200':
           description: Service Area Response
@@ -6179,10 +6078,10 @@ paths:
       tags:
       - Services
 securityDefinitions:
-  appid:
+  jwt:
     type: apiKey
     in: header
-    name: x-appid
+    name: x-jwt
   appkey:
     type: apiKey
     in: header
