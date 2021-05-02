@@ -112,3 +112,25 @@ https://github.com/swagger-api/swagger-node
 </ol>
 <li>Restart swagger project</li>
 </ol>
+
+## Configure Auth0 API & App to get token with username and password
+
+https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow#ask-for-a-token
+
+## Obtain a Json Web Token (JWT)
+
+1 - Sign up for an account at 
+
+2 - To obtain a token
+
+```bash
+curl --request POST \
+  --url 'https://codeforbtv-hsda.us.auth0.com/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data grant_type=password \
+  --data username=user@example.com \
+  --data password=pwd \
+  --data audience=hsda.codeforbtv.org \
+  --data 'client_id=pj4FrjErNBTil87nOL1y0k1JIxfWfFft' \
+  --data client_secret=nxdRI2ay_vUoPGoF6aJxN3gwn2aB1JxYgESLf3_ZUq0WSLyBWI1ES_OlL7jiYZrF
+```
