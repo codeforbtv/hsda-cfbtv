@@ -112,3 +112,50 @@ https://github.com/swagger-api/swagger-node
 </ol>
 <li>Restart swagger project</li>
 </ol>
+
+## Configure Auth0 API & App to get token with username and password
+
+https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow#ask-for-a-token
+
+## Make sure email address is attached to token via custom claims
+
+https://auth0.com/docs/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token
+
+- create a rule with the following function
+
+```
+function (user, context, callback) {
+  const namespace = 'https://codeforbtv.org/';
+  context.accessToken[namespace + 'email'] = user.email;
+  return callback(null, user, context);
+}
+```
+
+## Obtain a Json Web Token (JWT)
+
+1 - Sign up for an account at 
+
+2 - To obtain a token
+
+```bash
+curl --request POST \
+  --url https://codeforbtv.us.auth0.com/oauth/token \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data grant_type=password \
+  --data username=test.user@codeforbtv.org \
+  --data password=P@ssw0rd \
+  --data client_id=CTTBWOOzuza3IFMkFmcsWIrQzImMu4Ey \
+  --data client_secret=Bql2HYM1uU9NNfcrNPZsznLGhfFH4WeKHeCXekb7dc01QOYf7iPftGGSkWLhRAbR \
+  --data audience=hsda.codeforbtv.org
+```
+
+## Call API with Token
+
+```bash
+curl --request POST \
+  --url http://localhost:10010/contacts \
+  --header 'Acceptccept: application/json' \
+  --header 'Authorization: Bearer <TOKEN_GOES_HERE>' \
+  --header 'Content-Type: application/json' \
+  --data '{}'
+```
