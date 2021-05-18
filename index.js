@@ -1,9 +1,10 @@
 'use strict';
 require('dotenv').config();
-var SwaggerRestify = require('swagger-restify-mw');
-var restify = require('restify');
-var app = restify.createServer();
+const SwaggerRestify = require('swagger-restify-mw');
+const restify = require('restify');
+const app = restify.createServer();
 const securityHandlers = require('./api/helpers/security-handlers');
+const db = require('./api/helpers/db-connection');
 
 module.exports = app; // for testing
 

@@ -11,15 +11,7 @@
   It is a good idea to list the modules that your application depends on in the package.json in the project root
  */
 const util = require('util');
-const { Pool, Client } = require('pg')
-// pools will use environment variables
-// for connection information
-const dbConfig = {
-  ssl: { rejectUnauthorized: false },
-  connectionString: process.env.HSDADBCONNECTIONSTRING
-};
-
-const pool = new Pool(dbConfig);
+const db = require('../helpers/db-connection');
 
 
 /*
@@ -76,9 +68,7 @@ function listContacts(req, res) {
     'order': order
   };
   console.log("listContacts() called");
-  pool.query('SELECT * FROM hsds.program;', (err, res) => {
-    console.log(res);
-  });
+  
   // this sends back a JSON response which is a single string
   res.json(outputMessage);
 }
@@ -91,6 +81,9 @@ function addContact(req, res) {
     res.json ('missing body');
   }
   else {
+    db.getConnection().query('SELECT hsds.addcontact;', (err, res) => {
+      console.log(res);
+    });
     //look for first and last name in the body
     const firstName = body.firstName || 'no first name given';
     const lastName = body.lastName || 'no last name given';
