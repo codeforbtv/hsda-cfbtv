@@ -117,6 +117,20 @@ https://github.com/swagger-api/swagger-node
 
 https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow#ask-for-a-token
 
+## Make sure email address is attached to token via custom claims
+
+https://auth0.com/docs/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token
+
+- create a rule with the following function
+
+```
+function (user, context, callback) {
+  const namespace = 'https://codeforbtv.org/';
+  context.accessToken[namespace + 'email'] = user.email;
+  return callback(null, user, context);
+}
+```
+
 ## Obtain a Json Web Token (JWT)
 
 1 - Sign up for an account at 
@@ -125,12 +139,23 @@ https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow#as
 
 ```bash
 curl --request POST \
-  --url 'https://codeforbtv-hsda.us.auth0.com/oauth/token' \
-  --header 'content-type: application/x-www-form-urlencoded' \
+  --url https://codeforbtv.us.auth0.com/oauth/token \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
   --data grant_type=password \
-  --data username=user@example.com \
-  --data password=pwd \
-  --data audience=hsda.codeforbtv.org \
-  --data 'client_id=pj4FrjErNBTil87nOL1y0k1JIxfWfFft' \
-  --data client_secret=nxdRI2ay_vUoPGoF6aJxN3gwn2aB1JxYgESLf3_ZUq0WSLyBWI1ES_OlL7jiYZrF
+  --data username=test.user@codeforbtv.org \
+  --data password=P@ssw0rd \
+  --data client_id=CTTBWOOzuza3IFMkFmcsWIrQzImMu4Ey \
+  --data client_secret=Bql2HYM1uU9NNfcrNPZsznLGhfFH4WeKHeCXekb7dc01QOYf7iPftGGSkWLhRAbR \
+  --data audience=hsda.codeforbtv.org
+```
+
+## Call API with Token
+
+```bash
+curl --request POST \
+  --url http://localhost:10010/contacts \
+  --header 'Acceptccept: application/json' \
+  --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVseHR3MlRwbGY5X1JkX0c0TllyUiJ9.eyJpc3MiOiJodHRwczovL2NvZGVmb3JidHYudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTMxZGNiZmQ0YjY1MDA3MjNhYjA0NyIsImF1ZCI6ImhzZGEuY29kZWZvcmJ0di5vcmciLCJpYXQiOjE2MjEzMDM0NTEsImV4cCI6MTYyMTM4OTg1MSwiYXpwIjoiQ1RUQldPT3p1emEzSUZNa0ZtY3NXSXJRekltTXU0RXkiLCJndHkiOiJwYXNzd29yZCJ9.LNoTbT2-pasVL_e5phg-gYmc0MRty9ek3vxKX4-KOVhMJDCwKvQdgN8itvUpwG6kDrOmHg-Xp8Wg_-7NzALTEuoDh1g9Vt6i0YBiGPvXbwQE9kdPY8lEY1NXnPjjRXvUwHf80cSYefX6el75a4chGlWkVQl1KuKbOxZWIfCv_cYymxPv8fnaxnAPuBSiDbsIDqtox5zYtHyOQnaoqUqMTzkq0keeNfjAA0smFrRQAK2r-XGBQrB7J210sUHj5x2eI1ohrbKS8MQw-knYzdIAysF4kAvjE3Gl5s2Y3zauHPwIT1MvXu_H8ujNevs4sVN45jxvkC4IoELc7Rgwk2locQ' \
+  --header 'Content-Type: application/json' \
+  --data '{}'
 ```

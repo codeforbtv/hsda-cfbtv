@@ -270,7 +270,6 @@ paths:
       - Contacts
       security:
       - jwt: []
-      - appkey: []
       responses:
         '200':
           description: Contact Response
@@ -368,7 +367,6 @@ paths:
       - Contacts
       security:
       - jwt: []
-      - appkey: []
       responses:
         '200':
           description: Contact Response
@@ -6078,14 +6076,6 @@ paths:
       tags:
       - Services
 securityDefinitions:
-  jwt:
-    type: apiKey
-    in: header
-    name: x-jwt
-  appkey:
-    type: apiKey
-    in: header
-    name: x-appkey
   jwt:
     type: apiKey
     in: header
