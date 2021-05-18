@@ -155,7 +155,7 @@ curl --request POST \
 curl --request POST \
   --url http://localhost:10010/contacts \
   --header 'Acceptccept: application/json' \
-  --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVseHR3MlRwbGY5X1JkX0c0TllyUiJ9.eyJpc3MiOiJodHRwczovL2NvZGVmb3JidHYudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTMxZGNiZmQ0YjY1MDA3MjNhYjA0NyIsImF1ZCI6ImhzZGEuY29kZWZvcmJ0di5vcmciLCJpYXQiOjE2MjEzMDM0NTEsImV4cCI6MTYyMTM4OTg1MSwiYXpwIjoiQ1RUQldPT3p1emEzSUZNa0ZtY3NXSXJRekltTXU0RXkiLCJndHkiOiJwYXNzd29yZCJ9.LNoTbT2-pasVL_e5phg-gYmc0MRty9ek3vxKX4-KOVhMJDCwKvQdgN8itvUpwG6kDrOmHg-Xp8Wg_-7NzALTEuoDh1g9Vt6i0YBiGPvXbwQE9kdPY8lEY1NXnPjjRXvUwHf80cSYefX6el75a4chGlWkVQl1KuKbOxZWIfCv_cYymxPv8fnaxnAPuBSiDbsIDqtox5zYtHyOQnaoqUqMTzkq0keeNfjAA0smFrRQAK2r-XGBQrB7J210sUHj5x2eI1ohrbKS8MQw-knYzdIAysF4kAvjE3Gl5s2Y3zauHPwIT1MvXu_H8ujNevs4sVN45jxvkC4IoELc7Rgwk2locQ' \
+  --header 'Authorization: Bearer <TOKEN_GOES_HERE>' \
   --header 'Content-Type: application/json' \
   --data '{}'
 ```
