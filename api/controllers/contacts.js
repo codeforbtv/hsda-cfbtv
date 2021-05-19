@@ -81,8 +81,14 @@ function addContact(req, res) {
     res.json ('missing body');
   }
   else {
-    db.getConnection().query('SELECT hsds.addcontact;', (err, res) => {
-      console.log(res);
+    db.getConnection().query("INSERT INTO hsds.contact (objectid,id,name) VALUES ('1','someid','Jane Doe')", (err, res) => {
+    //db.getConnection().query("SELECT * FROM hsds.contact", (err, res) => {
+      if (!err) {
+        console.log(res.rows);
+      }
+      if (err) {
+        console.log("Error:" + err);
+      }
     });
     //look for first and last name in the body
     const firstName = body.firstName || 'no first name given';
